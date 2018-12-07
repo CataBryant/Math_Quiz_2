@@ -86,7 +86,7 @@ namespace MathQuiz2
             product.Value = 0;
             TimeLeft = 10;
             Time.Text = "10 seconds";
-            Time.BackColor = Color.Aqua;
+            Time.BackColor = Color.Red;
             timer1.Start();
         }
 
@@ -120,6 +120,7 @@ namespace MathQuiz2
             StartTheQuizHard();
             button2.Enabled = false;
             button1.Enabled = false;
+            button3.Enabled = false;
             BackColor = Color.Indigo;
         }
 
@@ -131,6 +132,7 @@ namespace MathQuiz2
                 MessageBox.Show("Congratulations! You won a cookie!");
                 button1.Enabled = true;
                 button2.Enabled = true;
+                button3.Enabled = true;
                 player2.Play();
             }
             else
@@ -151,7 +153,11 @@ namespace MathQuiz2
                 button1.Enabled = true;
                 button2.Enabled = true;
             }
-            if (TimeLeft < 10)
+            if (TimeLeft <= 20)
+            {
+                Time.BackColor = Color.Yellow;
+            }
+            if (TimeLeft <= 10)
             {
                 Time.BackColor = Color.Red;
             }
@@ -161,7 +167,47 @@ namespace MathQuiz2
         {
             StartTheQuiz();
             button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
             BackColor = Color.Green;
+        }
+
+        public void StartTheQuizMedium()
+        {
+            addend1 = Randomizer.Next(51);
+            addend2 = Randomizer.Next(51);
+            addmin1 = Randomizer.Next(1, 51);
+            addmin2 = Randomizer.Next(1, addmin1);
+            addpro1 = Randomizer.Next(2, 11);
+            addpro2 = Randomizer.Next(2, 11);
+            adddiv2 = Randomizer.Next(2, 11);
+            temporary = Randomizer.Next(2, 11);
+            adddiv1 = adddiv2 * temporary;
+
+            plusLeftLabel.Text = addend1.ToString();
+            plusRightLabel.Text = addend2.ToString();
+            minusLeftLabel.Text = addmin1.ToString();
+            minusRightLabel.Text = addmin2.ToString();
+            proLeftLabel.Text = addpro1.ToString();
+            proRightLabel.Text = addpro2.ToString();
+            divLeftLabel.Text = adddiv1.ToString();
+            divRightLabel.Text = adddiv2.ToString();
+            sum.Value = 0;
+            difference.Value = 0;
+            div.Value = 0;
+            product.Value = 0;
+            TimeLeft = 20;
+            Time.Text = "20 seconds";
+            Time.BackColor = Color.Yellow;
+            timer1.Start();
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            StartTheQuizMedium();
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            BackColor = Color.SteelBlue;
         }
     }
 }
