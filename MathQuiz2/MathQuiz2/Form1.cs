@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Media;
 using System.Windows.Forms;
 
 namespace MathQuiz2
@@ -16,7 +17,8 @@ namespace MathQuiz2
         {
             InitializeComponent();
         }
-
+        SoundPlayer player = new SoundPlayer(@"E:\p1.wav");
+        SoundPlayer player2 = new SoundPlayer(@"E:\p2.wav");
         int TimeLeft;
         Random Randomizer = new Random();
         int addend1;
@@ -129,6 +131,7 @@ namespace MathQuiz2
                 MessageBox.Show("Congratulations! You won a cookie!");
                 button1.Enabled = true;
                 button2.Enabled = true;
+                player2.Play();
             }
             else
             if (TimeLeft > 0)
@@ -139,6 +142,7 @@ namespace MathQuiz2
             else
             {
                 timer1.Stop();
+                player.Play();
                 MessageBox.Show("Too slow.Try again");
                 sum.Value = addend1 + addend2;
                 difference.Value = addmin1 - addmin2;

@@ -65,7 +65,7 @@
             this.button1.Location = new System.Drawing.Point(271, 296);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(184, 30);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 1;
             this.button1.Text = "START EAZY";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -75,7 +75,7 @@
             this.button2.Location = new System.Drawing.Point(271, 355);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(184, 27);
-            this.button2.TabIndex = 1;
+            this.button2.TabIndex = 2;
             this.button2.Text = "START HARD";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -248,7 +248,7 @@
             this.sum.Location = new System.Drawing.Point(416, 136);
             this.sum.Name = "sum";
             this.sum.Size = new System.Drawing.Size(120, 22);
-            this.sum.TabIndex = 20;
+            this.sum.TabIndex = 3;
             this.sum.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // difference
@@ -256,7 +256,7 @@
             this.difference.Location = new System.Drawing.Point(416, 185);
             this.difference.Name = "difference";
             this.difference.Size = new System.Drawing.Size(120, 22);
-            this.difference.TabIndex = 21;
+            this.difference.TabIndex = 4;
             this.difference.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // product
@@ -264,7 +264,7 @@
             this.product.Location = new System.Drawing.Point(416, 219);
             this.product.Name = "product";
             this.product.Size = new System.Drawing.Size(120, 22);
-            this.product.TabIndex = 22;
+            this.product.TabIndex = 5;
             this.product.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // div
@@ -272,7 +272,7 @@
             this.div.Location = new System.Drawing.Point(416, 252);
             this.div.Name = "div";
             this.div.Size = new System.Drawing.Size(120, 22);
-            this.div.TabIndex = 23;
+            this.div.TabIndex = 6;
             this.div.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // timer1
